@@ -11,6 +11,7 @@ networks:
 services:
   npm-app:
     image: 'jc21/nginx-proxy-manager:latest'
+    restart: always
     ports:
       - '80:80'
       - '81:81'
@@ -29,6 +30,7 @@ services:
       - backend
   npm-db:
     image: 'jc21/mariadb-aria:latest'
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: '2p3vcAdmin'
       MYSQL_DATABASE: 'npm'
