@@ -9,11 +9,13 @@ volumes:
     driver: local
 
 networks:
-    frontend:
-        external: true
-        backend:
-        external: true
+  frontend:
+      external: true
+  backend:
+      external: true
+
 services:
+    
   mariadb:
     image: docker.io/bitnami/mariadb:10.6
     environment:
@@ -31,8 +33,8 @@ services:
   moodle:
     image: docker.io/bitnami/moodle:3
     ports:
-      - '80:8080'
-      - '443:8443'
+      - '8080:8080'
+      - '8443:8443'
     environment:
       - MOODLE_DATABASE_HOST=mariadb
       - MOODLE_DATABASE_PORT_NUMBER=3306
@@ -50,4 +52,5 @@ services:
     depends_on:
       - mariadb
     networks:
-	  - forntend
+      - frontend
+      - backend
