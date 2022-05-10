@@ -23,7 +23,7 @@ services:
 
   moodle:
     image: docker.io/bitnami/moodle:3.11.7
-    ports:
+        ports:
       - '8080:8080'
       - '8443:8443'
     environment:
@@ -42,6 +42,6 @@ services:
       - 'moodledata_data:/bitnami/moodledata'
     depends_on:
       - mariadb
-      networks:
+    networks:
         - frontend
         - backend
