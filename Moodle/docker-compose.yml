@@ -2,11 +2,9 @@ version: '3'
 
 volumes:
   mariadb_data:
-    driver: local
   moodle_data:
-    driver: local
   moodledata_data:
-    driver: local
+
 
 networks:
   frontend:
@@ -33,8 +31,8 @@ services:
   moodle:
     image: docker.io/bitnami/moodle:3
     ports:
-      - '8080:8080'
-      - '8443:8443'
+      - '80:8080'
+      - '443:8443'
     environment:
       - MOODLE_DATABASE_HOST=mariadb
       - MOODLE_DATABASE_PORT_NUMBER=3306
