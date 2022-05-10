@@ -4,7 +4,12 @@ volumes:
   mariadb_data:
   moodle_data:
   moodledata_data:
-
+networks:
+    frontend:
+          external: true
+    backend:
+            external: true
+  
 services:
     
   mariadb:
