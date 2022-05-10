@@ -42,13 +42,13 @@ services:
       - MOODLE_PASSWORD=2p3vcAdmin
       - MOODLE_USERNAME=Admin
       - MOODLE_HOST=elearning.laspipascorp.com
-      - MOODLE_REVERSEPROXY=true
-      - MOODLE_SSLPROXY=true      
     volumes:
       - 'moodle_data:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
     depends_on:
       - mariadb
+    links:
+      - mariadb:mariadb
     networks:
       - frontend
       - backend
