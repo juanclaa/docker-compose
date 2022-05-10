@@ -16,6 +16,7 @@ services:
     
   mariadb:
     image: docker.io/bitnami/mariadb:10.6
+    restart: always
     environment:
       - MARIADB_USER=bn_moodle
       - MARIADB_PASSWORD=2p3vcAdmin
@@ -30,6 +31,7 @@ services:
       
   moodle:
     image: docker.io/bitnami/moodle:3.11.7
+    restart: always
     ports:
       - '8080:8080'
       - '8443:8443'
