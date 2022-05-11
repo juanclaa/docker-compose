@@ -14,7 +14,7 @@ networks:
 services:
 
   nextcloud-app:
-    image: nextcloud
+    image: nextcloud:24
     restart: always
     volumes:
       - nextcloud-data:/var/www/html
