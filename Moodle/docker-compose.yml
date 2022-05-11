@@ -10,8 +10,7 @@ networks:
     backend:
             external: true
   
-services:
-    
+services:    
   mariadb:
     image: docker.io/bitnami/mariadb:10.6
     environment:
@@ -27,7 +26,7 @@ services:
       - backend
 
   moodle:
-    image: docker.io/bitnami/moodle:3.11.7
+    image: docker.io/bitnami/moodle:3
     ports:
       - '8080:8080'
       - '8443:8443'
