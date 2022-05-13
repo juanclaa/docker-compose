@@ -1,5 +1,8 @@
 version: '3'
 
+networks:
+  frontend:
+      external: true
 services:
   vaultwarden:
     restart: always
@@ -7,9 +10,6 @@ services:
     image: vaultwarden/server:latest
     volumes:
       - ./vw-data/:/data/
-    networks:
-        frontend:
-            external: true
     ports:
       - 8062:80
     environment:
