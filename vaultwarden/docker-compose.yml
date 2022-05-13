@@ -36,5 +36,5 @@ services:
       - EMERGENCY_ACCESS_ALLOWED=true
       - SENDS_ALLOWED=true
       - WEB_VAULT_ENABLED=true
-      networks:
+    networks:
         - frontend
