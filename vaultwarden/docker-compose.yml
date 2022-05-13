@@ -7,6 +7,9 @@ services:
     image: vaultwarden/server:latest
     volumes:
       - ./vw-data/:/data/
+    networks:
+        frontend:
+            external: true
     ports:
       - 8062:80
     environment:
@@ -33,3 +36,5 @@ services:
       - EMERGENCY_ACCESS_ALLOWED=true
       - SENDS_ALLOWED=true
       - WEB_VAULT_ENABLED=true
+      networks:
+        - frontend
