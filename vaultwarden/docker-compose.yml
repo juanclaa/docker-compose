@@ -13,11 +13,11 @@ services:
     ports:
       - 8062:80
     environment:
-      - SMTP_HOST=mail.laspipascor.com
+      - SMTP_HOST=200.6.244.242
       - SMTP_FROM=info@laspipascorp.com
       - SMTP_FROM_NAME=VaultWarden
       - SMTP_SECURITY=starttls
-      - SMTP_PORT=587
+      - SMTP_PORT=465
       - SMTP_USERNAME=info@laspipascorp.com
       - SMTP_PASSWORD=;,62,EIghtnin
       - SMTP_TIMEOUT=30
