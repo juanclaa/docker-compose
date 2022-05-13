@@ -18,7 +18,7 @@ services:
       - SMTP_HOST=200.6.244.242
       - SMTP_FROM=info@laspipascorp.com
       - SMTP_FROM_NAME=VaultWarden
-      - SMTP_SECURITY=starttls
+      - SMTP_SECURITY=none
       - SMTP_PORT=465
       - SMTP_USERNAME=info@laspipascorp.com
       - SMTP_PASSWORD=;,62,EIghtnin
@@ -32,7 +32,7 @@ services:
       - ADMIN_TOKEN=27Qw9tcd63/*
       - SIGNUPS_ALLOWED=false
       - SIGNUPS_DOMAINS_WHITELIST=laspipascorp.com
-      - SIGNUPS_VERIFY=true
+      - SIGNUPS_VERIFY=false
       - SIGNUPS_VERIFY_RESEND_TIME=3600
       - SIGNUPS_VERIFY_RESEND_LIMIT=6
       - EMERGENCY_ACCESS_ALLOWED=true
