@@ -38,8 +38,8 @@ services:
       - MOODLE_DATABASE_NAME=bitnami_moodle
       - MOODLE_PASSWORD=2p3vcAdmin
       - MOODLE_USERNAME=Admin
-      - MOODLE_REVERSEPROXY=true
-      - MOODLE_SSLPROXY=true      
+      #- MOODLE_REVERSEPROXY=true
+      #- MOODLE_SSLPROXY=true      
     volumes:
       - 'moodle_data:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
